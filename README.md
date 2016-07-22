@@ -1,6 +1,6 @@
 # phalcon_file_manager
 
-Requirements 
+**Requirements**
   > php 5.5 +
   > Phalcon frameword
   > Nginx or Apache
@@ -13,4 +13,4 @@ Requirements
       - application[token] is md5(password)
       - Login with username and password
 
-:)) Good luck
+**:)) Good luck**
