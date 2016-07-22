@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="" />
+    <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/prepros.cfg" afterPath="$PROJECT_DIR$/web/filemanager/asset/prepros.cfg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/index.php" afterPath="$PROJECT_DIR$/web/filemanager/index.php" />
+    </list>
     <ignored path="live.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -118,11 +121,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.62095875">
+            <state vertical-scroll-proportion="-21.423077">
               <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/filemanager/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.69453734">
+              <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Module.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/data/Module.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.615385">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -234,7 +257,6 @@
         <option value="$PROJECT_DIR$/app/auth/form/AdminLoginForm.php" />
         <option value="$PROJECT_DIR$/app/datasource/lib/Util.php" />
         <option value="$PROJECT_DIR$/app/data/Module.php" />
-        <option value="$PROJECT_DIR$/web/filemanager/index.php" />
         <option value="$PROJECT_DIR$/app/filemanager/Module.php" />
         <option value="$PROJECT_DIR$/app/data/lib/Upload.php" />
         <option value="$PROJECT_DIR$/app/data/lib/Constant.php" />
@@ -254,6 +276,7 @@
         <option value="$PROJECT_DIR$/app/filemanager/view/default/main/login.volt" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/MainController.php" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" />
+        <option value="$PROJECT_DIR$/web/filemanager/index.php" />
       </list>
     </option>
   </component>
@@ -883,20 +906,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/controller/MainController.php" />
-    <entry file="file://$PROJECT_DIR$/web/filemanager/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63176066">
-          <caret line="200" column="39" selection-start-line="200" selection-start-column="39" selection-end-line="200" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/data/Module.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43728423">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/Module.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27617952">
@@ -1065,8 +1074,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.62095875">
+        <state vertical-scroll-proportion="-21.423077">
           <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/data/Module.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.615385">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/filemanager/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.69453734">
+          <caret line="201" column="9" selection-start-line="201" selection-start-column="9" selection-end-line="201" selection-end-column="9" />
           <folding />
         </state>
       </provider>

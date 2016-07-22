@@ -197,7 +197,7 @@ try {
             'path' => ROOT . '/app/filemanager/Module.php'
         ),
         'data' => array(
-            'className' => 'ITECH\Data\Module',
+            'className' => 'MINI\Data\Module',
             'path' => ROOT . '/app/data/Module.php'
         )
     ));
