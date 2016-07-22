@@ -44,6 +44,14 @@ function callbackAfterSelect(result) {
     console.log(result);
 })
 ```
+**Insert to Tinymce editor
+- copy web/filemanager/asset/helper_plugins/tinymce/plugins/image to directory plguin tinymce your project.
+- Enable plguin image in config tinymce.
+- Done.
+
 
 **:)) Good luck**
+
 ![Phalcon file manager](http://codex4u.com/template.png "Phalcon file manager")
+
+![Phalcon file manager](http://codex4u.com/editor.png "Phalcon file manager")
