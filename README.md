@@ -46,4 +46,4 @@ function callbackAfterSelect(result) {
 ```
 
 **:)) Good luck**
-![alt text](https://drive.google.com/file/d/0B9XvEd2H5xTOLWZhVWlTbGFBQ00/view?usp=sharing "Phalcon file manager")
+![Phalcon file manager](http://codex4u.com/template.png "Phalcon file manager")
