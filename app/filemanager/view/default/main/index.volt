@@ -4,6 +4,8 @@
     <script src="{{ config.application.base_url }}/asset/js/app.js"></script>
     <div class="wrap">
         <div class="list-dir">
+            <div class="alert alert-info text-center" style="padding: 5px">
+                <b class="total-size"></b> / <b class="total-dir"></b> folder - <b class="total-file"></b> file</div>
             <div class="wrap-list">
                 <ul></ul>
             </div>

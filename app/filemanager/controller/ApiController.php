@@ -3,6 +3,10 @@ namespace MINI\Filemanager\Controller;
 
 class ApiController extends BaseController
 {
+    private $folderCount = 0;
+    private $fileCount = 0;
+    private $sizeCount = 0;
+
     public function getFolderListAction()
     {
         $path = $this->config->application->upload_dir;
@@ -11,7 +15,12 @@ class ApiController extends BaseController
         parent::outputJSON(array(
             'status'=> 200,
             'message' => 'Success',
-            'result' => $result
+            'result' => $result,
+            'meta_count' => array(
+                'folder_count' => number_format($this->folderCount, 0 , ',', '.'),
+                'file_count' => number_format($this->fileCount, 0 , ',', '.'),
+                'size_count' => number_format($this->sizeCount / 1000, 0 , ',', '.') . 'MB'
+            )
         ));
     }
 
@@ -33,14 +42,18 @@ class ApiController extends BaseController
                 if (!in_array($info->getMTime(), $metaTime)) {
                     $metaTime[] = $info->getMTime();
                 }
+
+                $type = filetype($this->config->application->upload_dir . $path .  $item);
+                $size = $info->getSize() / 1000;
+
                 $folderList[] = array(
                     'name' => $item,
                     'create' => $info->getMTime(),
                     'metadata' => array (
-                        'type' => filetype($this->config->application->upload_dir . $path .  $item),
+                        'type' => $type,
                         'ext' => strtolower($info->getExtension()),
                         'group' => \MINI\Data\Lib\Util::getTypeFile($info->getExtension()),
-                        'size' => number_format($info->getSize() / 1000, 0) . 'KB',
+                        'size' => $size . 'KB',
                         'link' => $info->isFile() ? $this->config->application->base_url . 'uploads/' . $path . $item : $path . $item,
                         'path' => $path . $item
                     )
@@ -54,7 +67,7 @@ class ApiController extends BaseController
             'status'=> 200,
             'message' => 'Success: ' . $this->session->get('PATH_CURRENT'),
             'result' => $folderList,
-            'meta_time' => $metaTime
+            'meta_time' => $metaTime,
         ));
     }
 
@@ -215,11 +228,18 @@ class ApiController extends BaseController
         $cdir = scandir($path);
 
         foreach ($cdir as $item) {
-            if (is_dir($path . '/' . $item) && !in_array($item, array(".","..")) ) {
-                $out[] = array(
-                    'name' => $item,
-                    'sub_dir' => $this->getFolder($path . '/' . $item)
-                );
+            if (!in_array($item, array(".", ".."))) {
+                $size = filesize($path . '/' . $item) / 1000;
+                $this->sizeCount = $this->sizeCount + $size;
+                if (is_dir($path . '/' . $item)) {
+                    $out[] = array(
+                        'name' => $item,
+                        'sub_dir' => $this->getFolder($path . '/' . $item)
+                    );
+                    $this->folderCount ++;
+                } else {
+                    $this->fileCount ++;
+                }
             }
         }
         return $out;

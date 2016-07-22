@@ -282,6 +282,11 @@ function getListFolder($, callback) {
             '<a class="open-sub" data-path=""><span class="arrow-list-dir"></span>Thư mục gốc</a>' +
             '<ul class="sub-list" style="display: block">' + buildTreeView($folder_list, '') + '</ul>' +
             '</li>');
+
+        $('.total-dir').text(data.meta_count.folder_count);
+        $('.total-file').text(data.meta_count.file_count);
+        $('.total-size').text(data.meta_count.size_count);
+
     }).always(function(){
         if (typeof callback == 'function'){
             callback();
