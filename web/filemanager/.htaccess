@@ -1,0 +1,101 @@
+AddDefaultCharset utf-8
+
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php?_url=/$1 [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+<IfModule mod_deflate.c>
+    AddOutputFilterByType deflate text/plain
+    AddOutputFilterByType deflate text/html
+    AddOutputFilterByType deflate text/xml
+    AddOutputFilterByType deflate text/css
+    AddOutputFilterByType deflate text/javascript
+    AddOutputFilterByType deflate application/javascript
+    AddOutputFilterByType deflate application/xhtml+xml
+    AddOutputFilterByType deflate application/xml
+    AddOutputFilterByType deflate application/pdf
+    AddOutputFilterByType deflate application/x-font-ttf
+    AddOutputFilterByType deflate application/x-font-truetype
+    AddOutputFilterByType deflate application/x-font-opentype
+    AddOutputFilterByType deflate application/font-woff
+    AddOutputFilterByType deflate application/vnd.ms-fontobject
+    AddOutputFilterByType deflate application/octet-stream
+
+    AddOutputFilterByType deflate image/x-icon
+    AddOutputFilterByType deflate image/ico
+    AddOutputFilterByType deflate image/jpeg
+    AddOutputFilterByType deflate image/jpg
+    AddOutputFilterByType deflate image/png
+    AddOutputFilterByType deflate image/gif
+    AddOutputFilterByType deflate image/bmp
+
+    <FilesMatch "\.(ico|jpeg|jpg|bmp|png|gif|swf|css|js|txt|xml|doc|php|cgi|pl|html|htm|eot|ttf|woff)$">
+        SetOutputFilter deflate
+    </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresDefault A0
+
+    ExpiresByType text/plain A0
+    ExpiresByType text/html A0
+    ExpiresByType text/xml A0
+    ExpiresByType application/xhtml+xml A0
+    ExpiresByType application/xml A0
+
+    ExpiresByType text/css A31536000
+    ExpiresByType text/javascript A31536000
+    ExpiresByType application/x-javascript A31536000
+    ExpiresByType application/javascript A31536000
+
+    ExpiresByType application/pdf A31536000
+    ExpiresByType application/x-shockwave-flash A31536000
+    ExpiresByType video/x-flv A31536000
+
+    ExpiresByType application/x-font-ttf A31536000
+    ExpiresByType application/x-font-truetype A31536000
+    ExpiresByType application/x-font-opentype A31536000
+    ExpiresByType application/font-woff A31536000
+    ExpiresByType application/vnd.ms-fontobject A31536000
+    ExpiresByType application/octet-stream A31536000
+
+    ExpiresByType image/x-icon A31536000
+    ExpiresByType image/ico A31536000
+    ExpiresByType image/jpeg A31536000
+    ExpiresByType image/jpg A31536000
+    ExpiresByType image/png A31536000
+    ExpiresByType image/gif A31536000
+    ExpiresByType image/bmp A31536000
+</IfModule>
+
+<IfModule mod_headers.c>
+    <FilesMatch "\.(ico|jpeg|jpg|bmp|png|gif|swf)$">
+        ExpiresDefault A31536000
+        Header set Cache-Control "max-age=31536000, public"
+        Header unset ETag
+        FileETag None
+    </FilesMatch>
+
+    <FilesMatch "\.(css|js)$">
+        ExpiresDefault A31536000
+        Header set Cache-Control "max-age=31536000, private, must-revalidate"
+        Header unset ETag
+        FileETag None
+    </FilesMatch>
+
+    <FilesMatch "\.(php|cgi|pl|html|htm)$">
+        ExpiresDefault A0
+        Header set Cache-Control "max-age=0, no-store, no-cache, must-revalidate"
+        Header set Pragma "no-cache"
+        Header unset ETag
+        FileETag None
+    </FilesMatch>
+</IfModule>
