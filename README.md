@@ -44,7 +44,7 @@ function callbackAfterSelect(result) {
     console.log(result);
 })
 ```
-**Insert to Tinymce editor
+**Insert to Tinymce editor**
 - copy web/filemanager/asset/helper_plugins/tinymce/plugins/image to directory plguin tinymce your project.
 - Enable plguin image in config tinymce.
 - Done.
