@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/config/router.php" afterPath="$PROJECT_DIR$/app/filemanager/config/router.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" afterPath="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/controller/MainController.php" afterPath="$PROJECT_DIR$/app/filemanager/controller/MainController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" afterPath="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/view/default/main/login.volt" afterPath="$PROJECT_DIR$/app/filemanager/view/default/main/login.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/css/style.css" afterPath="$PROJECT_DIR$/web/filemanager/asset/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/css/style.less" afterPath="$PROJECT_DIR$/web/filemanager/asset/css/style.less" />
-    </list>
+    <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="" />
     <ignored path="live.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -130,8 +121,8 @@
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5540691">
-              <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.62095875">
+              <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
               <folding />
             </state>
           </provider>
@@ -1074,8 +1065,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5540691">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.62095875">
+          <caret line="40" column="59" selection-start-line="40" selection-start-column="59" selection-end-line="40" selection-end-column="59" />
           <folding />
         </state>
       </provider>
