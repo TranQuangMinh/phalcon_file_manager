@@ -27,7 +27,7 @@
                 {% if width and height %}
                     Size: <b>{{ width }} x {{ height }}</b> <br>
                 {% endif %}
-                DLượng: <b>{{ size }}</b>MB<br>
+                DLượng: <b>{{ size }}</b>KB<br>
                 Kiểu: <b>{{ type }}</b>
                 <a href="{{ src }}">Link tải về</a>
             </p>

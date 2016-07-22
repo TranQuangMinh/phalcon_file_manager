@@ -300,6 +300,9 @@ img {
   position: relative;
   min-height: 200px;
 }
+.detail-img img {
+  height: auto;
+}
 .detail-img .col-left {
   width: 100%;
   float: left;

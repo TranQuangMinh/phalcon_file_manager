@@ -13,7 +13,8 @@ class BaseController extends Controller
 
         if (!$this->session->has('USER') && $this->dispatcher->getActionName() != 'login'){
             $this->response->redirect(array(
-               'for' => 'login'
+               'for' => 'login',
+                'query' => '?referrer=' . urlencode($this->config->application->base_url . '?' . http_build_query($this->request->getQuery()))
             ));
         }
 
@@ -33,9 +34,14 @@ class BaseController extends Controller
 
             if (md5($user) == $this->config->application->token_user && md5($pass) == $this->config->application->token) {
                 $this->session->set('USER', 'true');
-                $this->response->redirect(array(
-                    'for' => 'index'
-                ));
+                if ($this->request->hasPost('referrer')) {
+                    $this->response->redirect(urldecode($this->request->getPost('referrer')));
+                } else {
+                    $this->response->redirect(array(
+                        'for' => 'index'
+                    ));
+                }
+
             } else {
                 $mess = 'Tài khoản hoặc mật khẩu không đúng.';
             }

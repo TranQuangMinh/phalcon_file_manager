@@ -5,7 +5,7 @@ $router->add('/', array(
     'action' => 'index'
 ))->setName('index');
 
-$router->add('/login', array(
+$router->add('/login{query:(/.*)*}', array(
     'module' => 'filemanager',
     'controller' => 'base',
     'action' => 'login'

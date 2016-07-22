@@ -6,9 +6,6 @@ class MainController extends BaseController
 {
     public function indexAction()
     {
-        $this->view->setVars(array(
-
-        ));
         $this->view->pick('default/main/index');
     }
 
