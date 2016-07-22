@@ -29,7 +29,7 @@
                 {% endif %}
                 DLượng: <b>{{ size }}</b>KB<br>
                 Kiểu: <b>{{ type }}</b>
-                <a href="{{ src }}">Link tải về</a>
+                <a target="_blank" href="{{ src }}">Link tải về</a>
             </p>
             <a href="" class="btn btn-block btn-danger delete-file-single">Xóa file</a>
             <a href="" class="btn btn-block btn-warning btn-change-file">Đổi file</a>

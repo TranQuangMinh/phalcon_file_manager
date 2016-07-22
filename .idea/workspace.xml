@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/controller/ApiController.php" afterPath="$PROJECT_DIR$/app/filemanager/controller/ApiController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" afterPath="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" afterPath="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/js/app.js" afterPath="$PROJECT_DIR$/web/filemanager/asset/js/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/css/style.css" afterPath="$PROJECT_DIR$/web/filemanager/asset/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/css/style.less" afterPath="$PROJECT_DIR$/web/filemanager/asset/css/style.less" />
     </list>
     <ignored path="live.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,14 +64,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.volt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49052396">
-              <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+            <state vertical-scroll-proportion="-19.23077">
+              <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.9141583">
+              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,8 +112,6 @@
         <option value="$PROJECT_DIR$/app/filemanager/config/parameter_example.php" />
         <option value="$PROJECT_DIR$/app/filemanager/config/.gitignore" />
         <option value="$PROJECT_DIR$/app/filemanager/config/parameter.php" />
-        <option value="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" />
-        <option value="$PROJECT_DIR$/web/filemanager/asset/css/style.less" />
         <option value="$PROJECT_DIR$/app/filemanager/config/router.php" />
         <option value="$PROJECT_DIR$/app/filemanager/view/default/main/login.volt" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/MainController.php" />
@@ -110,7 +119,9 @@
         <option value="$PROJECT_DIR$/web/filemanager/index.php" />
         <option value="$PROJECT_DIR$/web/filemanager/asset/js/app.js" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/ApiController.php" />
+        <option value="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" />
         <option value="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" />
+        <option value="$PROJECT_DIR$/web/filemanager/asset/css/style.less" />
       </list>
     </option>
   </component>
@@ -287,6 +298,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file.gach3dmanhtri.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="file.gach3dmanhtri.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="filemanager" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="asset" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -557,7 +594,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17324094" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -859,14 +896,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022271715">
-          <caret line="325" column="9" selection-start-line="325" selection-start-column="9" selection-end-line="325" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/filemanager/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6904232">
@@ -907,14 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022271715">
           <caret line="7" column="34" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022271715">
-          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1017,13 +1038,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42363435">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49052396">
-          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        <state vertical-scroll-proportion="-19.23077">
+          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9141583">
+          <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>

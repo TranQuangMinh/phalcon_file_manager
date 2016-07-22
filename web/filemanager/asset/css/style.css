@@ -37,6 +37,7 @@ body {
 .list-dir .wrap-list {
   display: inline-block;
   white-space: nowrap;
+  min-width: 100%;
 }
 .list-dir .arrow-list-dir {
   display: none;
