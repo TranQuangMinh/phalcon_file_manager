@@ -51,4 +51,7 @@
             </div><!-- /input-group -->
         </form>
     </div>
+    <script>
+        var current_path = '{{ session.get('RELATIVE_PATH_CURRENT') }}';
+    </script>
 {% endblock %}

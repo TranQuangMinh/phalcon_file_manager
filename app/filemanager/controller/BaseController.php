@@ -11,6 +11,10 @@ class BaseController extends Controller
             $this->session->set('PATH_CURRENT', $this->config->application->upload_dir);
         }
 
+        $relative = str_replace($this->config->application->upload_dir, '', $this->session->get('PATH_CURRENT'));
+        $relative = trim($relative, '/');
+        $this->session->set('RELATIVE_PATH_CURRENT', $relative);
+
         if (!$this->session->has('USER') && $this->dispatcher->getActionName() != 'login'){
             $this->response->redirect(array(
                'for' => 'login',

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e804adc-9605-4d3d-9358-c71a866d3a18" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" afterPath="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" afterPath="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/filemanager/asset/js/app.js" afterPath="$PROJECT_DIR$/web/filemanager/asset/js/app.js" />
     </list>
     <ignored path="live.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +29,8 @@
       <file leaf-file-name="ApiController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/filemanager/controller/ApiController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
+            <state vertical-scroll-proportion="-16.884615">
+              <caret line="192" column="81" selection-start-line="192" selection-start-column="69" selection-end-line="192" selection-end-column="81" />
               <folding />
             </state>
           </provider>
@@ -38,23 +40,22 @@
         <entry file="file://$PROJECT_DIR$/web/filemanager/asset/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
+              <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
               <folding>
-                <element signature="e#329#497#0" expanded="false" />
-                <element signature="e#729#1222#0" expanded="false" />
-                <element signature="e#1280#1428#0" expanded="false" />
-                <element signature="e#1484#2960#0" expanded="false" />
-                <element signature="e#3025#4370#0" expanded="false" />
-                <element signature="e#4423#4809#0" expanded="false" />
-                <element signature="e#4863#5141#0" expanded="false" />
-                <element signature="e#5197#5745#0" expanded="false" />
-                <element signature="e#6155#6419#0" expanded="false" />
-                <element signature="e#6471#6682#0" expanded="false" />
-                <element signature="e#6731#7703#0" expanded="false" />
-                <element signature="e#7759#7843#0" expanded="false" />
-                <element signature="e#7897#9303#0" expanded="false" />
-                <marker date="1469205931935" expanded="true" signature="4801:4803" placeholder="{...}" />
-                <marker date="1469205931935" expanded="true" signature="10643:10657" placeholder="..." />
+                <element signature="e#761#929#0" expanded="false" />
+                <element signature="e#1161#1654#0" expanded="false" />
+                <element signature="e#1712#1860#0" expanded="false" />
+                <element signature="e#1916#3392#0" expanded="false" />
+                <element signature="e#3457#4802#0" expanded="false" />
+                <element signature="e#4855#5241#0" expanded="false" />
+                <element signature="e#5295#5573#0" expanded="false" />
+                <element signature="e#5629#6177#0" expanded="false" />
+                <element signature="e#6587#6851#0" expanded="false" />
+                <element signature="e#6903#7114#0" expanded="false" />
+                <element signature="e#8191#8275#0" expanded="false" />
+                <element signature="e#8329#9735#0" expanded="false" />
+                <marker date="1470727468478" expanded="true" signature="5233:5235" placeholder="{...}" />
+                <marker date="1470727468478" expanded="true" signature="11075:11089" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -63,18 +64,48 @@
       <file leaf-file-name="index.volt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+            <state vertical-scroll-proportion="-27.615385">
+              <caret line="54" column="24" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseController.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/filemanager/controller/BaseController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.311804">
+              <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66815144">
+            <state vertical-scroll-proportion="-23.076923">
               <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameter.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/filemanager/config/parameter.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.23077">
+              <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.volt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main.volt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.461538">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -109,13 +140,13 @@
         <option value="$PROJECT_DIR$/app/filemanager/config/router.php" />
         <option value="$PROJECT_DIR$/app/filemanager/view/default/main/login.volt" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/MainController.php" />
-        <option value="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" />
         <option value="$PROJECT_DIR$/web/filemanager/index.php" />
-        <option value="$PROJECT_DIR$/web/filemanager/asset/js/app.js" />
         <option value="$PROJECT_DIR$/app/filemanager/controller/ApiController.php" />
         <option value="$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt" />
-        <option value="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" />
         <option value="$PROJECT_DIR$/web/filemanager/asset/css/style.less" />
+        <option value="$PROJECT_DIR$/app/filemanager/view/default/main/index.volt" />
+        <option value="$PROJECT_DIR$/web/filemanager/asset/js/app.js" />
+        <option value="$PROJECT_DIR$/app/filemanager/controller/BaseController.php" />
       </list>
     </option>
   </component>
@@ -588,9 +619,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496802" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18496802" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -649,21 +680,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
           <folding>
-            <element signature="e#329#497#0" expanded="false" />
-            <element signature="e#729#1222#0" expanded="false" />
-            <element signature="e#1280#1428#0" expanded="false" />
-            <element signature="e#1484#2960#0" expanded="false" />
-            <element signature="e#3025#4370#0" expanded="false" />
-            <element signature="e#4423#4809#0" expanded="false" />
-            <element signature="e#4863#5141#0" expanded="false" />
-            <element signature="e#5197#5745#0" expanded="false" />
-            <element signature="e#6155#6419#0" expanded="false" />
-            <element signature="e#6471#6682#0" expanded="false" />
-            <element signature="e#6731#7703#0" expanded="false" />
-            <element signature="e#7759#7843#0" expanded="false" />
-            <element signature="e#7897#9303#0" expanded="false" />
-            <marker date="1469205931935" expanded="true" signature="4801:4803" placeholder="{...}" />
-            <marker date="1469205931935" expanded="true" signature="10643:10657" placeholder="..." />
+            <element signature="e#761#929#0" expanded="false" />
+            <element signature="e#1161#1654#0" expanded="false" />
+            <element signature="e#1712#1860#0" expanded="false" />
+            <element signature="e#1916#3392#0" expanded="false" />
+            <element signature="e#3457#4802#0" expanded="false" />
+            <element signature="e#4855#5241#0" expanded="false" />
+            <element signature="e#5295#5573#0" expanded="false" />
+            <element signature="e#5629#6177#0" expanded="false" />
+            <element signature="e#6587#6851#0" expanded="false" />
+            <element signature="e#6903#7114#0" expanded="false" />
+            <element signature="e#8191#8275#0" expanded="false" />
+            <element signature="e#8329#9735#0" expanded="false" />
+            <marker date="1470727468478" expanded="true" signature="5233:5235" placeholder="{...}" />
+            <marker date="1470727468478" expanded="true" signature="11075:11089" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -747,21 +777,20 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="36" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="36" />
           <folding>
-            <element signature="e#329#497#0" expanded="false" />
-            <element signature="e#729#1222#0" expanded="false" />
-            <element signature="e#1280#1428#0" expanded="false" />
-            <element signature="e#1484#2960#0" expanded="false" />
-            <element signature="e#3025#4370#0" expanded="false" />
-            <element signature="e#4423#4809#0" expanded="false" />
-            <element signature="e#4863#5141#0" expanded="false" />
-            <element signature="e#5197#5745#0" expanded="false" />
-            <element signature="e#6155#6419#0" expanded="false" />
-            <element signature="e#6471#6682#0" expanded="false" />
-            <element signature="e#6731#7703#0" expanded="false" />
-            <element signature="e#7759#7843#0" expanded="false" />
-            <element signature="e#7897#9303#0" expanded="false" />
-            <marker date="1469205931935" expanded="true" signature="4801:4803" placeholder="{...}" />
-            <marker date="1469205931935" expanded="true" signature="10643:10657" placeholder="..." />
+            <element signature="e#761#929#0" expanded="false" />
+            <element signature="e#1161#1654#0" expanded="false" />
+            <element signature="e#1712#1860#0" expanded="false" />
+            <element signature="e#1916#3392#0" expanded="false" />
+            <element signature="e#3457#4802#0" expanded="false" />
+            <element signature="e#4855#5241#0" expanded="false" />
+            <element signature="e#5295#5573#0" expanded="false" />
+            <element signature="e#5629#6177#0" expanded="false" />
+            <element signature="e#6587#6851#0" expanded="false" />
+            <element signature="e#6903#7114#0" expanded="false" />
+            <element signature="e#8191#8275#0" expanded="false" />
+            <element signature="e#8329#9735#0" expanded="false" />
+            <marker date="1470727468478" expanded="true" signature="5233:5235" placeholder="{...}" />
+            <marker date="1470727468478" expanded="true" signature="11075:11089" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -895,13 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/controller/BaseController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.022271715">
-          <caret line="30" column="39" selection-start-line="30" selection-start-column="39" selection-end-line="30" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/login.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4454343">
@@ -927,20 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.022271715">
           <caret line="3052" column="28" selection-start-line="3052" selection-start-column="28" selection-end-line="3052" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main.volt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53452116">
-          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/config/parameter.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73273945">
-          <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
         </state>
       </provider>
     </entry>
@@ -986,38 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/controller/ApiController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="89" selection-start-line="21" selection-start-column="89" selection-end-line="21" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="284" column="0" selection-start-line="284" selection-start-column="0" selection-end-line="284" selection-end-column="0" />
-          <folding>
-            <element signature="e#329#497#0" expanded="false" />
-            <element signature="e#729#1222#0" expanded="false" />
-            <element signature="e#1280#1428#0" expanded="false" />
-            <element signature="e#1484#2960#0" expanded="false" />
-            <element signature="e#3025#4370#0" expanded="false" />
-            <element signature="e#4423#4809#0" expanded="false" />
-            <element signature="e#4863#5141#0" expanded="false" />
-            <element signature="e#5197#5745#0" expanded="false" />
-            <element signature="e#6155#6419#0" expanded="false" />
-            <element signature="e#6471#6682#0" expanded="false" />
-            <element signature="e#6731#7703#0" expanded="false" />
-            <element signature="e#7759#7843#0" expanded="false" />
-            <element signature="e#7897#9303#0" expanded="false" />
-            <marker date="1469205931935" expanded="true" signature="4801:4803" placeholder="{...}" />
-            <marker date="1469205931935" expanded="true" signature="10643:10657" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/detail.volt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42363435">
@@ -1025,18 +1001,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
+    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="86" selection-start-line="25" selection-start-column="86" selection-end-line="25" selection-end-column="86" />
+        <state vertical-scroll-proportion="-23.076923">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/css/style.less">
+    <entry file="file://$PROJECT_DIR$/app/filemanager/config/parameter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66815144">
-          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state vertical-scroll-proportion="-23.23077">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="32" selection-end-line="32" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.461538">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filemanager/controller/ApiController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.884615">
+          <caret line="192" column="81" selection-start-line="192" selection-start-column="69" selection-end-line="192" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filemanager/view/default/main/index.volt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.615385">
+          <caret line="54" column="24" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/filemanager/asset/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="123" column="6" selection-start-line="123" selection-start-column="6" selection-end-line="123" selection-end-column="6" />
+          <folding>
+            <element signature="e#761#929#0" expanded="false" />
+            <element signature="e#1161#1654#0" expanded="false" />
+            <element signature="e#1712#1860#0" expanded="false" />
+            <element signature="e#1916#3392#0" expanded="false" />
+            <element signature="e#3457#4802#0" expanded="false" />
+            <element signature="e#4855#5241#0" expanded="false" />
+            <element signature="e#5295#5573#0" expanded="false" />
+            <element signature="e#5629#6177#0" expanded="false" />
+            <element signature="e#6587#6851#0" expanded="false" />
+            <element signature="e#6903#7114#0" expanded="false" />
+            <element signature="e#8191#8275#0" expanded="false" />
+            <element signature="e#8329#9735#0" expanded="false" />
+            <marker date="1470727468478" expanded="true" signature="5233:5235" placeholder="{...}" />
+            <marker date="1470727468478" expanded="true" signature="11075:11089" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filemanager/controller/BaseController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.311804">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
           <folding />
         </state>
       </provider>

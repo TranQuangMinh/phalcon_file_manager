@@ -1,18 +1,24 @@
 var folder_list = {};
 var entry_curent = {};
-var current_path = '';
 var selectedFile = [];
 var ajaxUpload = false;
 var totalFile = 0;
 
 $(document).ready(function(){
-
     $wrap_list_folder = $('.list-dir .wrap-list');
 
-    getListFolder($);
-    updateListFileByPath('', $);
+    getListFolder($, function () {
+        if (current_path != '') {
+            $(document).find('[data-path="'+ current_path +'"]').addClass('active opening').next('.sub-list').stop(true, true).slideDown('fast');
+            $(document).find('[data-path="'+ current_path +'"]').parents('li').children('a').addClass('active').next('.sub-list').stop(true, true).slideDown('fast');
+            $('body').find('.opening').trigger('click');
+        } else {
+            updateListFileByPath('', $);
+        }
+    });
+
 })
-    .on('click', '.arrow-list-dir', function (event) {
+.on('click', '.arrow-list-dir', function (event) {
         event.preventDefault();
         $(this).closest('a').toggleClass('active').next('.sub-list').stop(true, true).slideToggle('fast');
         return false;
