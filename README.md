@@ -13,6 +13,14 @@
   - application[token] is md5(password)
   - Login with username and password
   
+**Share session across domains**
+  - Insert before ```session_start();``` Admin app and Filemanager app 
+
+```php 
+  session_name('any_name');
+  ini_set('session.cookie_domain', '.domain.xyz');
+```
+
 **How to use**
 - form.php
 ```html
