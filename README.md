@@ -60,6 +60,6 @@ function callbackAfterSelect(result) {
 
 **:)) Good luck**
 
-![Phalcon file manager](http://codex4u.com/template.png "Phalcon file manager")
+![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/login.png?raw=true "Phalcon file manager")
 
-![Phalcon file manager](http://codex4u.com/editor.png "Phalcon file manager")
+![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/index.png?raw=true "Phalcon file manager")
