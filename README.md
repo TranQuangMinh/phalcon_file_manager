@@ -63,3 +63,7 @@ function callbackAfterSelect(result) {
 ![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/login.png?raw=true "Phalcon file manager")
 
 ![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/index.png?raw=true "Phalcon file manager")
+
+![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/tinyme.png?raw=true "Phalcon file manager")
+
+![Phalcon file manager](https://github.com/TranQuangMinh/phalcon_file_manager/blob/master/selected.png?raw=true "Phalcon file manager")
