@@ -1,4 +1,10 @@
 <?php
+$router->add('/dl-url', array(
+    'module' => 'filemanager',
+    'controller' => 'main',
+    'action' => 'dlUrl'
+))->setName('dl_url');
+
 $router->add('/', array(
     'module' => 'filemanager',
     'controller' => 'main',
@@ -48,6 +54,12 @@ $router->add('/upload-file{query:(/.*)*}', array(
     'controller' => 'api',
     'action' => 'uploadFile'
 ))->setName('upload_file');
+
+$router->add('/upload-cdn{query:(/.*)*}', array(
+    'module' => 'filemanager',
+    'controller' => 'api',
+    'action' => 'uploadFileFromAnywhere'
+))->setName('upload_cdn');
 
 $router->add('/detail{query:(/.*)*}', array(
     'module' => 'filemanager',

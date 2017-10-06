@@ -27,6 +27,10 @@ class BaseController extends Controller
                'for' => 'index'
             ));
         }
+
+        if ($this->request->hasQuery('origin_url')) {
+            $this->config->application->allow_parent = urldecode($this->request->getQuery('origin_url'));
+        }
     }
 
     public function loginAction()

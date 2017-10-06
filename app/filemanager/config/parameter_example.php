@@ -4,7 +4,7 @@ $parameters = array();
 $parameters = array(
     'cache' => array(
         'lifetime' => 300,
-        'prefix' => '_file_',
+        'prefix' => '_mbn_admin_',
         'type' => 'apc',
         'memcache' => array(
             'host' => '127.0.0.1',
@@ -18,11 +18,17 @@ $parameters = array(
             'persistent' => false
         ),
         'metadata' => array(
-            'prefix' => 'file_',
+            'prefix' => 'mbn_',
             'lifetime' => '31536000'
         )
     ),
+    'limit' => array(
+        'size' => 1000000, // 500kB,
+        'width' => 1000,
+        'height' => 1000,
+        'jpeg_quality' => 90
 
+    ),
     'volt' => array(
         'debug' => true,
         'stat' => true,
@@ -32,11 +38,13 @@ $parameters = array(
     'application' => array(
         'protocol' => 'http://',
         'pagination_limit' => '3',
-        'base_url' => 'http://filemanager.domain.com/',
-        'token' => '9e95d128ee0d0fd3dc4bee95b279ae2b', // md5(user)
-        'token_user' => '75412de6b9e3a2d750ace50770c52562', // md5(pass)
+        'base_url' => 'http://filemanager.dev/',
+        'token' => '21232f297a57a5a743894a0e4a801fc3', //admin
+        'token_user' => '21232f297a57a5a743894a0e4a801fc3' // admin,
         'upload_dir' => ROOT . '/web/filemanager/uploads/',
-        'upload_url' => 'http://filemanager.domain.com/uploads/',
-        'allow_parent' => 'http://admin.domain.com/' //Admin show iframe and get data
+        'thumbnail_dir' => ROOT . '/web/filemanager/thumbnails/',
+        'thumbnail_url' => 'http://filemanager.dev/thumbnails/',
+        'upload_url' => 'http://filemanager.dev/uploads/',
+        'allow_parent' => 'https://admin.domain.com/'
     ),
 );

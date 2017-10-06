@@ -1,6 +1,8 @@
 <?php
 namespace MINI\Filemanager\Controller;
 
+use MINI\Data\Lib\Constant;
+
 class ApiController extends BaseController
 {
     private $folderCount = 0;
@@ -156,6 +158,130 @@ class ApiController extends BaseController
         }
     }
 
+    public function uploadFileFromAnywhereAction()
+    {
+        $response = array();
+
+        $response['status'] = \MINI\Data\Lib\Constant::STATUS_CODE_SUCCESS;
+        $response['message'] = 'Success.';
+        $warning = [];
+
+        if ($this->request->isPost()) {
+            $content    = $this->request->getPost('content');
+            $from       = $this->request->getPost('from');
+            $user_phone = $this->request->getPost('user_phone');
+            
+            if ($from == '') {
+                $response['status'] = \MINI\Data\Lib\Constant::STATUS_CODE_ERROR;
+                $response['message'] = 'Error.';
+                $response['result'][] = array(
+                    'from' => 'This param is require'
+                );
+                parent::outputJSON($response);
+            }
+
+            if ($user_phone == '') {
+                $response['status'] = \MINI\Data\Lib\Constant::STATUS_CODE_ERROR;
+                $response['message'] = 'Error.';
+                $response['result'][] = array(
+                    'user_phone' => 'This param is require'
+                );
+                parent::outputJSON($response);
+            }
+
+            $filename = $from . '-' . $user_phone . '-' . uniqid();
+            $pathUpload = $this->config->application->upload_dir . $from . '/' . date('Y') . '/' . date('m') . '/' . date('d');
+
+            $handle = new \MINI\Data\Lib\Upload('data:'.$content);
+            $handle->file_overwrite = true;
+            $handle->file_new_name_body = $filename;
+            $handle->file_max_size = $this->config->limit->size;
+            $handle->allowed = array('image/*');
+            $handle->image_convert = 'jpg';
+            $handle->jpeg_quality = $this->config->limit->jpeg_quality;
+
+            if ($handle->image_src_x  > $this->config->limit->width ) {
+                $warning['width'] = 'Chiều ngang lớn hơn qui định (1000px), sẽ bị điều chỉnh về 1000px. Origin: ' . $handle->image_src_x . 'px';
+
+                $handle->image_resize = true;
+                $handle->image_x = $this->config->limit->width;
+                $handle->image_ratio_y = true;
+            } 
+            if ($handle->image_y  > $this->config->limit->height ) {
+                $warning['height'] = 'Chiều cao lớn hơn qui định (1000px), sẽ bị điều chỉnh về 1000px. Origin: ' . $handle->image_src_y . 'px';
+
+                $handle->image_resize = true;
+                $handle->image_y = $this->config->limit->height;
+                $handle->image_ratio_x = true;
+            }
+            if ($handle->file_src_size  > $this->config->limit->size ) {
+                $response = array(
+                    'status' => \MINI\Data\Lib\Constant::STATUS_CODE_ERROR,
+                    'message' => 'Lỗi, Dung lượng hình lớn hơn quy định (tối đa: ' .  number_format($this->config->limit->size / 1000 / 1000)  . 'MB).',
+                    'resulf' => array(
+                        'size' => $handle->file_src_size
+                    ),
+                    'warning' => $warning
+                );
+                parent::outputJSON($response);
+            }
+
+            try {
+                if (!$handle->uploaded) {
+                    $response = array(
+                        'status' => \MINI\Data\Lib\Constant::STATUS_CODE_ERROR,
+                        'message' => 'Lỗi, không thể upload.',
+                        'warning' => $warning
+                    );
+                    parent::outputJSON($response);
+
+                } else {
+                    $handle->process($pathUpload);
+
+                    if ($handle->processed) {
+                        $response = array(
+                            'status' => \MINI\Data\Lib\Constant::STATUS_CODE_SUCCESS,
+                            'message' => 'Upload thành công.',
+                            'result' => array(
+                                'file_name_body' => $handle->file_dst_name_body,
+                                'file_name_ext' => $handle->file_dst_name_ext,
+                                'file_name' => $handle->file_dst_name,
+                                'file_url' => str_replace('\\', '/', str_replace($this->config->application->upload_dir, $this->config->application->upload_url, $handle->file_dst_pathname)),
+                                'file_path' => str_replace('\\', '/', str_replace($this->config->application->upload_dir, '', $handle->file_dst_pathname)),
+                                'image_dst_type' => $handle->image_dst_type,
+                                'image_width' => $handle->image_dst_x,
+                                'image_height' => $handle->image_dst_y,
+
+                            ),
+                            'warning' => $warning
+                        );
+
+                        $response['thumbnail'] = $this->createThumbnail($handle);
+
+
+                    } else {
+                        $response = array(
+                            'status' => \MINI\Data\Lib\Constant::STATUS_CODE_ERROR,
+                            'message' => 'Lỗi, không thể xử lý hình ảnh.',
+                            'warning' => $warning,
+                            'result' => $handle->error
+                        );
+                    }
+
+                    parent::outputJSON($response);
+                }
+
+            } catch (\Phalcon\Exception $e) {
+                $response = array(
+                    'status' => \MINI\Data\Lib\Constant::STATUS_CODE_ERROR,
+                    'message' => 'Có lỗi xảy ra . ' . $e->getMessage(),
+                    'warning' => $warning
+                );
+                parent::outputJSON($response);
+            }  
+        }
+    }
+
     public function uploadFileAction()
     {
         if ($this->request->isAjax()) {
@@ -199,6 +325,9 @@ class ApiController extends BaseController
                                             'message' => 'Upload thành công.',
                                             'result' => $file_name
                                         );
+
+                                        $response['thumbnail'] = $this->createThumbnail($u);
+
                                     } else {
                                         $response = array(
                                             'status' => \MINI\Data\Lib\Constant::STATUS_CODE_ERROR,
@@ -243,5 +372,60 @@ class ApiController extends BaseController
             }
         }
         return $out;
+    }
+
+    private function createThumbnail(\MINI\Data\Lib\Upload $handle)
+    {
+        $output = array();
+
+        $thumbDir = $this->config->application->thumbnail_dir;
+        if( !is_dir($thumbDir) ) {
+            mkdir($thumbDir);
+        }
+
+        $sizes = array(
+            20, 150, 250, 500
+        );
+
+        $handle->file_overwrite = true;
+
+
+        $pathUpload = str_replace($this->config->application->upload_dir, '', $handle->file_dst_path);
+        foreach ($sizes as $width) {
+            $_handle = $handle;
+            if( !is_dir($thumbDir . $width . '/') ) {
+                @mkdir($thumbDir . $width . '/');
+            }
+
+            $_handle->file_new_name_body = $handle->file_dst_name_body;
+            $_handle->image_convert = 'jpg';
+            $_handle->jpeg_quality = $this->config->limit->jpeg_quality;
+            $_handle->image_resize = true;
+            $_handle->image_x = $width;
+            $_handle->image_ratio_y = true;
+            $_handle->process($thumbDir . $width . '/' . $pathUpload);
+
+            $waring = '';
+            if($_handle->image_src_x > $width) {
+                $waring = 'Resize.';
+            } else {
+                $waring = 'No Resize.';
+            }
+
+            if ($_handle->processed) {
+                $output[$width ] = array(
+                    'status' => Constant::STATUS_CODE_SUCCESS,
+                    'url' => $this->config->application->thumbnail_url . $width . '/' . $pathUpload . $_handle->file_dst_name,
+                    'warning' => $waring,
+                );
+            } else {
+                $output[$width ] = array(
+                    'status' => Constant::STATUS_CODE_ERROR,
+                    'message' => 'Không tạo được thumbnail ' . $width
+                );
+            }
+        }
+        $output['pathUpload'] = $pathUpload;
+        return $output;
     }
 }

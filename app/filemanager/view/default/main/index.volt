@@ -1,6 +1,7 @@
 {% extends 'default/main.volt' %}
 
 {% block content %}
+    <script>var requestGet = {{ request.getQuery()|json_encode }}</script>
     <script src="{{ config.application.base_url }}/asset/js/app.js"></script>
     <div class="wrap">
         <div class="list-dir">
@@ -33,7 +34,15 @@
             </div>
 
             <div class="footer-tool text-right">
-                <button data-callback="{{ request.getQuery('callback') ? request.getQuery('callback') : 'getFileFromFileManager' }}"  data-inputReceive="{{ request.getQuery('input-receive') ? request.getQuery('input-receive') : 'false' }}" class="btn btn-success disabled" id="send-to-parent">Sử dụng <span class="selected-count"></span></button>
+                <button
+                        data-height="{{ request.getQuery('height') ? request.getQuery('height') : '' }}"
+                        data-width="{{ request.getQuery('width') ? request.getQuery('width') : '' }}"
+                        data-callback="{{ request.getQuery('callback') ? request.getQuery('callback') : 'getFileFromFileManager' }}"
+                        data-inputReceive="{{ request.getQuery('input-receive') ? request.getQuery('input-receive') : 'false' }}"
+                        class="btn btn-success disabled" id="send-to-parent">
+
+                        Sử dụng <span class="selected-count"></span>
+                </button>
                 <button class="btn btn-default disabled" id="cancel-selected">Hủy chọn <span class="selected-count"></span></button>
             </div>
 
@@ -51,7 +60,5 @@
             </div><!-- /input-group -->
         </form>
     </div>
-    <script>
-        var current_path = '{{ session.get('RELATIVE_PATH_CURRENT') }}';
-    </script>
+
 {% endblock %}

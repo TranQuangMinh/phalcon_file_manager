@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <title>File manager</title>
-    <link rel="stylesheet" href="{{ config.application.base_url }}/asset/css/bootstrap.css">
-    <link rel="stylesheet" href="{{ config.application.base_url }}/asset/fancybox/jquery.fancybox.css">
-    <link rel="stylesheet" href="{{ config.application.base_url }}/asset/css/style.css">
+    <link rel="stylesheet" href="{{ config.application.base_url }}asset/css/bootstrap.css">
+    <link rel="stylesheet" href="{{ config.application.base_url }}asset/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="{{ config.application.base_url }}asset/css/style.css">
 
     <script>
         var router = {
@@ -23,13 +23,14 @@
             'upload_url' : '{{ config.application.upload_url }}',
             'asset_url' : '{{ config.application.base_url }}asset/',
             'allowParent' : '{{ config.application.allow_parent }}'
-        }
+        };
+        var current_path = '{{ session.get("RELATIVE_PATH_CURRENT") }}';
     </script>
 
-    <script src="{{ config.application.base_url }}/asset/js/jquery.js"></script>
-    <script src="{{ config.application.base_url }}/asset/js/bootstrap.min.js"></script>
-    <script src="{{ config.application.base_url }}/asset/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="{{ config.application.base_url }}/asset/js/ImageTools.js"></script>
+    <script src="{{ config.application.base_url }}asset/js/jquery.js"></script>
+    <script src="{{ config.application.base_url }}asset/js/bootstrap.min.js"></script>
+    <script src="{{ config.application.base_url }}asset/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="{{ config.application.base_url }}asset/js/ImageTools.js"></script>
 </head>
 <body>
     {% block content %}{% endblock %}
